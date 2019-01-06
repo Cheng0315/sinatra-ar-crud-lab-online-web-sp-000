@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/articles/:id' do
 
-    redirect '/articles/:id'
+    redirect "/articles/#{params[:id]}"
   end
 
   delete '/articles/:id' do
