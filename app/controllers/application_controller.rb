@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/articles/:id' do
     @id = params[:id]
-    Article.all.delete_if {|a| a.id == @id}
+    Article.all.count
   end
 
 end
