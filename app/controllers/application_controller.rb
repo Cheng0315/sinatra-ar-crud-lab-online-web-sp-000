@@ -48,4 +48,8 @@ class ApplicationController < Sinatra::Base
     redirect get "/articles/:id"
   end
 
+  delete '/articles/:id' do
+    Article.all.delete_if {|a| a.id == params[:id]}
+  end
+
 end
