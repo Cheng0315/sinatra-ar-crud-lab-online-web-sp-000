@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/articles/:id' do
-    Article.all.delete_if {|a| a.id == params[:id]}
+    Article.all.each.delete_if {|a| a.id == params[:id]}
   end
 
 end
