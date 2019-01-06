@@ -50,7 +50,8 @@ class ApplicationController < Sinatra::Base
 
   delete '/articles/:id' do
     @id = params[:id]
-    "#{a = Article.all.find(@id)}"
+    a = Article.all.find(@id)
+    "#{a.title}"
   end
 
 end
