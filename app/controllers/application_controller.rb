@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
 
   get '/articles/:id' do
     @article1 = Article.find(params[:id])
-
+    "this is even better than the last"
     erb :show
   end
 
