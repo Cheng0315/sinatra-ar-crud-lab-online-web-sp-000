@@ -1,6 +1,5 @@
 <%=@article1.title%>
 <%=@article1.content%>
-<p>this is even better than the last</p>
 <form action="/articles/<%= @article1.id %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="delete">
   <input type="submit" value="delete" id="Submit">
